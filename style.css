@@ -9,8 +9,54 @@ body, html {
     margin: 0;
     color: whitesmoke;
     
-    background-color: rgb(221, 94, 48);
+    background-color: #f5f7fa;
 }
+
+ul {
+      margin-left: 0px; 
+      padding: 0px;
+
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  height: 80%;
+}
+    .horizontal li {
+        margin-right: 10px; 
+        display: flex;
+        align-items: center;
+    }
+
+.circ-outline {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.circ-outline a {
+  display: flex;           /* make link behave like the image did */
+  align-items: center;     /* center image vertically */
+  height: 100%;            /* so % heights inside work */
+}
+
+.circ-outline img {
+  height: 80%;              /* 80% of the link's height */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: white;
+  border: 2.5px solid #f5f7fa;
+  display: block;           /* remove inline spacing under img */
+  transition: box-shadow 0.2s ease;
+}
+
+.circ-outline img:hover {
+  box-shadow: 0 0 4px 2px #ebf0ec8f;
+  cursor: pointer;  
+}
+
 
 /* CLASSES */ 
 
@@ -26,31 +72,30 @@ body, html {
     justify-content: space-between;
 }
 
-
-
-/* ID's */ 
-.slot {
-    box-shadow: 0px 0px 15px 5px rgba(42, 41, 55, 0.597);
-    
-    border-radius: 14px;
-    border-color: rgba(20, 18, 18, 0.90); 
-    background-color: rgba(20, 18, 18, 0.831);
-}
-
-/* margin accounts for view port*/ 
-#cap {
+.cap {
    height: 50px;
    margin-top: 2.5vh;
    margin-bottom: 2.5vh;
 
-   padding-left: 12px;
-   padding-right: 12px;
+   padding-left: 18px;
+   padding-right: 18px;
    
    display: flex;
    justify-content: space-between;
    align-items: center;
 
 }
+
+.cell {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    
+    border-radius: 14px;
+    border-color: rgba(20, 18, 18, 0.9);
+    background-color: rgba(44, 62, 80, 0.85);
+}
+
+/* margin accounts for view port*/ 
+/* ID's */ 
 
 #content { 
     height: 80%;
