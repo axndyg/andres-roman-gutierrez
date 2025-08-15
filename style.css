@@ -1,7 +1,7 @@
 /* PAGE ELEMENTS */ 
 
 body, html { 
-    height: 100vh; 
+    min-height: 100vh; 
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -29,39 +29,64 @@ ul {
         align-items: center;
     }
 
+.text li { 
+  margin-right: 25px;
+}
+
 .circ-outline {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.circ-outline a {
-  display: flex;           /* make link behave like the image did */
-  align-items: center;     /* center image vertically */
-  height: 100%;            /* so % heights inside work */
+  .circ-outline a {
+    display: flex;           /* make link behave like the image did */
+    align-items: center;     /* center image vertically */
+    height: 100%;            /* so % heights inside work */
+  }
+
+  .circ-outline img {
+    height: 80%;              /* 80% of the link's height */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: white;
+    border: 2.5px solid #f5f7fa;
+    display: block;           /* remove inline spacing under img */
+    
+  }
+
+  .circ-outline img:hover {
+    box-shadow: 0 0 4px 2px #ebf0ec8f;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;  
+  }
+
+hr.content-line {
+    border: none;                            /* remove default border */
+    height: 2px;                              /* thickness */
+    width: 80%;                              /* can adjust if you want shorter lines */
+    background-color: rgba(245, 247, 250, 0.5); /* match whitesmoke with some transparency */
+    margin: -12px 0 0 0;                     /* space above & below */
+    border-radius: 1px;                       /* soften edges */
 }
 
-.circ-outline img {
-  height: 80%;              /* 80% of the link's height */
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
-  background-color: white;
-  border: 2.5px solid #f5f7fa;
-  display: block;           /* remove inline spacing under img */
-  transition: box-shadow 0.2s ease;
+a { 
+    text-decoration: none;
+    color: whitesmoke;
 }
 
-.circ-outline img:hover {
-  box-shadow: 0 0 4px 2px #ebf0ec8f;
-  cursor: pointer;  
-}
+    a:hover { 
+        color: #64b6ff;
+        transition: color 0.2s ease;
+        cursor: pointer;
+    }
+    
 
 
 /* CLASSES */ 
 
 .box { 
-    height: 100vh;
     width: 800px;
 
     max-width: 50vw;
@@ -94,6 +119,13 @@ ul {
     background-color: rgba(44, 62, 80, 0.85);
 }
 
+  .content-cell { 
+    margin-top: 0px;
+    height: 200px;
+  }
+
+  
+
 /* margin accounts for view port*/ 
 /* ID's */ 
 
@@ -101,5 +133,8 @@ ul {
     height: 80%;
     padding: 18px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
