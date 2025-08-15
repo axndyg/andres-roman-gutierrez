@@ -121,20 +121,60 @@ a {
 
   .content-cell { 
     margin-top: 0px;
-    height: 200px;
+    min-height: 100px;
   }
 
+.gallery {
+  border: 2px solid orange;
+
+  display: flex;
+  height: 200px;
+
+}
+
+  .image-block { 
+    border: 2px solid blue; 
+    flex: 1 30 0;
+    transition: flex-grow .5s ease-out;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    margin: 10px 8px 0px 0px; /*top right bottom left*/
+    border-radius: 10px;
+
+    /* minimum size when shrinking */
+    overflow: hidden; /* content can clip rather than expand size */
+
+    background-repeat: no-repeat;
+    background-position: left left;
+    background-size: cover; /* scales image to cover whole div */
+  }
+
+    .image-block:hover { 
+      flex-grow: 50;
+      transition: flex-grow .50s ease-in, 
+  
+    }
+
+    .image-left, .image-right {
+      border: 2px solid red;
+      flex: 1 1 auto
+    }
   
 
-/* margin accounts for view port*/ 
+/* margin accounts for view   port*/ 
 /* ID's */ 
 
 #content { 
     height: 80%;
     padding: 18px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
+  /* gallery images */
+    #image_01 { 
+      background-image: url("page-assets/gallery/pops.jpg");
+   
+    }
