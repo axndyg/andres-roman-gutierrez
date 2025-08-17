@@ -124,6 +124,62 @@ a {
     min-height: 100px;
   }
 
+  .content-cell-body {
+    border: 0px solid orange;
+    
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 10px;
+    padding: 10px;
+
+  }
+
+    
+
+    .content-cell-body img { 
+ 
+        height: 45px;
+        width: 45px;         
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+        background-color: white;
+        border: 1.5px solid #f5f7fa;
+        display: block;
+    }
+
+    .content-cell-left { 
+    
+      border: 0px solid purple;
+      margin-left: 20px;
+      margin-right: 20px;
+      min-width: 48px;
+    }
+
+    .content-cell-right { 
+      width: 100%;
+      border: 0px solid blue;
+      display: flex;
+      flex-direction: column;
+    }
+
+      .content-cell-right-entry {
+        border: solid 0px red;
+      }
+
+      .content-cell-header, .content-cell-subheader {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .content-cell-description { 
+        padding-top: 100px;
+      }
+
+
+
 .gallery {
   border: 2px solid orange;
 
