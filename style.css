@@ -40,19 +40,17 @@ ul {
 }
 
   .circ-outline a {
-    display: flex;           /* make link behave like the image did */
-    align-items: center;     /* center image vertically */
-    height: 100%;            /* so % heights inside work */
+    display: flex;          
+    align-items: center;    
+    height: 100%;           
   }
 
   .circ-outline img {
-    height: 80%;              /* 80% of the link's height */
-    aspect-ratio: 1 / 1;
+    height: 80%;            
     object-fit: cover;
     border-radius: 50%;
     background-color: white;
-    border: 2.5px solid #f5f7fa;
-    display: block;           /* remove inline spacing under img */
+    border: 2.5px solid #f5f7fa; 
     
   }
 
@@ -62,13 +60,12 @@ ul {
     cursor: pointer;  
   }
 
-hr.content-line {
-    border: none;                            /* remove default border */
-    height: 2px;                              /* thickness */
-    width: 80%;                              /* can adjust if you want shorter lines */
-    background-color: rgba(245, 247, 250, 0.5); /* match whitesmoke with some transparency */
-    margin: -12px 0 0 0;                     /* space above & below */
-    border-radius: 1px;                       /* soften edges */
+hr.content-line {                       
+    height: 2px;                        
+    width: 80%;                         
+    background-color: rgba(245, 247, 250, 0.5);
+    margin: -12px 0 0 0;              
+    border-radius: 1px;                       
 }
 
 a { 
@@ -135,10 +132,7 @@ a {
 
   }
 
-    
-
     .content-cell-body img { 
- 
         height: 45px;
         width: 45px;         
         aspect-ratio: 1 / 1;
@@ -150,11 +144,10 @@ a {
     }
 
     .content-cell-left { 
-    
       border: 0px solid purple;
-      margin-left: 20px;
+      margin-left: 5px;
       margin-right: 20px;
-      min-width: 48px;
+      width: 48px;
     }
 
     .content-cell-right { 
@@ -168,21 +161,41 @@ a {
         border: solid 0px red;
       }
 
+        .content-cell-right-box { 
+          border: solid 0px yellow;
+          display: flex;
+          justify-content: space-between;
+        }
+
+          .content-cell-right-box-main { 
+            border: 0px green solid;
+            flex: auto;
+          }
+
+            .content-cell-right-box ul { 
+              margin-top: 4px;
+              margin-bottom: 5px;
+            }
+              .content-cell-right-box li { 
+                margin-left: 8%;
+              }
+
+          .content-cell-right-box-note{
+            border: 0px deeppink solid;
+            min-width: 120px;
+            text-align: end;
+          }
+
       .content-cell-header, .content-cell-subheader {
         display: flex;
         justify-content: space-between;
         gap: 10px;
       }
 
-      .content-cell-description { 
-        padding-top: 100px;
-      }
-
-
+      
 
 .gallery {
-  border: 2px solid orange;
-
+  border: 1px solid orange;
   display: flex;
   height: 200px;
 
@@ -234,3 +247,7 @@ a {
       background-image: url("page-assets/gallery/pops.jpg");
    
     }
+
+#bio .content-cell-body{ 
+  font-size: 18px;
+}
